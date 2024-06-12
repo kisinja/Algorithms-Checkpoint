@@ -1,0 +1,10 @@
+ALGORITHM iterative_repeat
+VAR
+    age : INTEGER;
+BEGIN
+    REPEAT
+        Read(age);
+    UNTIL (age >= 0)
+
+    Write(age);
+END

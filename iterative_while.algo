@@ -1,0 +1,13 @@
+ALGORITHM iterative_while
+VAR
+    count : INTEGER := 0;
+    // n is the number to test
+    n: INTEGER ;
+BEGIN
+    WHILE (n % 2 = 0) DO
+        n := n / 2; // divide n by 2
+        count := count + 1; // increment count by one
+    END_WHILE
+
+    Write(count);
+END

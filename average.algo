@@ -1,0 +1,18 @@
+ALGORITHM average
+VAR
+    M1 : INTEGER;
+    M2 : INTEGER;
+    M3 : INTEGER;
+    M4 : INTEGER;
+    sum : INTEGER := 0;
+    average : FLOAT;
+BEGIN
+    sum := M1 + M2 + M3 + M4;
+    average := sum / 4;
+
+    IF (average < 50) THEN
+        Write("FAIL");
+    ELSE
+        Write("PASS");
+    END_IF
+END

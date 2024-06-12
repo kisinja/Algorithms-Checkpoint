@@ -1,0 +1,6 @@
+ALGORITHM process;
+VAR
+    set_declarations
+BEGIN
+    set_instructions
+END

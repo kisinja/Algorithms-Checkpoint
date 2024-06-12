@@ -1,0 +1,13 @@
+/* print the opening hour for a zoo
+according  to season
+ */
+
+// 1. It is winter / 2 It is summer / 3. It is spring / 4. It is autumn
+// x is the season
+SWITCH (x) DO
+    case 1 : Write("The zoo is open from 10:00 to 16:00"); BREAK;
+    case 2 : Write("The zoo is open from 09:00 to 18:00"); BREAK;
+    case 3 : Write("The zoo is open from 09:00 to 17:00"); BREAK;
+    case 4 : Write("The zoo is open from 10:00 to 17:00"); BREAK;
+    default : Write("Invalid season");
+END_SWITCH

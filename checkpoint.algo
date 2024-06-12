@@ -1,0 +1,42 @@
+ALGORITHM AnalyzeSentence
+VAR
+    length: INTEGER := 0;
+    wordCount: INTEGER := 0;
+    vowelCount: INTEGER := 0;
+    currentChar: CHAR;
+    previousChar: CHAR := ' ';
+    vowels: SET OF CHAR := {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+BEGIN
+    Read(currentChar)
+
+    WHILE currentChar <> '.' DO
+        // Increment the length counter for each character
+        length := length + 1;
+        
+        // Check if the current character is a vowel
+        IF currentChar IN vowels THEN
+            vowelCount := vowelCount + 1;
+        END_IF
+        
+        // Check for the start of a new word
+        IF currentChar = ' ' AND previousChar <> ' ' THEN
+            wordCount := wordCount + 1;
+        END_IF
+
+        // Update previousChar
+        previousChar := currentChar;
+
+        // Read next character
+        Read(currentChar);
+    END_WHILE
+
+    // If the last character before the point is not a space, count the last word
+    IF previousChar <> ' ' THEN
+        wordCount := wordCount + 1;
+    END_IF
+
+    // Display the results
+    Write("Length of the sentence: ", length);
+    Write("Number of words: ", wordCount);
+    Write("Number of vowels: ", vowelCount);
+END
